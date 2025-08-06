@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Petrino View - Βαφειός</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f1ee;
+      color: #333;
+    }
+    header {
+      background-color: #a68c74;
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      position: relative;
+    }
+    .lang-selector {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    h2 {
+      color: #a68c74;
+    }
+    ul {
+      padding-left: 1.2rem;
+    }
+    a {
+      color: #a68c74;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #a68c74;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="lang-selector">
+    <select onchange="changeLanguage(this.value)">
+      <option value="el">Ελληνικά</option>
+      <option value="en">English</option>
+      <option value="it">Italiano</option>
+      <option value="tr">Türkçe</option>
+    </select>
+  </div>
+  <h1 id="title">Petrino View</h1>
+  <p id="subtitle">6 παραδοσιακά διαμερίσματα στον Βαφειό, Λέσβος</p>
+  <p>Email: <a href="mailto:petrinoview@gmail.com" style="color: white;">petrinoview@gmail.com</a> | Τηλ: 6949878769</p>
+</header>
+
+<div class="container">
+
+  <h2 id="about-title">Σχετικά με το Petrino View</h2>
+  <p id="about-text">Το Petrino View αποτελείται από 6 ανεξάρτητα διαμερίσματα, το καθένα με δική του πλήρως εξοπλισμένη κουζίνα και μπάνιο. Το κατάλυμα προσφέρει δωρεάν WiFi, κλιματισμό, κήπο και βεράντα. Βρίσκεται στο παραδοσιακό χωριό Βαφειός, μόλις λίγα λεπτά από παραλίες και σημεία ενδιαφέροντος της Βόρειας Λέσβου.</p>
+  <p>📍 <span id="location-label">Τοποθεσία:</span> <a href="https://maps.app.goo.gl/cpDqj4DyWrYxcwyf9" target="_blank" id="map-link">Δείτε στον χάρτη</a></p>
+
+  <h2 id="amenities-title">Παροχές</h2>
+  <ul id="amenities-list">
+    <li id="a1">✅ Δωρεάν WiFi</li>
+    <li id="a2">✅ Κλιματισμός</li>
+    <li id="a3">✅ Κήπος & Βεράντα</li>
+    <li id="a4">✅ Κουζίνακι </li> 
+    <li id="a5">✅ Ιδιωτικό μπάνιο σε κάθε διαμέρισμα</li>
+    <li id="a6">✅ Στεγνωτήρας μαλλιών & προϊόντα μπάνιου</li>
+    <li id="a7">✅ Δωρεάν εμφιαλωμένο νερό στο ψυγείο κατά την άφιξη</li>
+    <li id="a8">✅ Πρωινό προσφέρεται <strong>μόνο την πρώτη ημέρα διαμονής</strong> ως ένδειξη φιλοξενίας – ώστε να προμηθευτείτε άνετα τα απαραίτητα.</li>
+    <li id="a9">✅ Δωρεάν χώρος στάθμευσης</li>
+  </ul>
+
+  <h2 id="checkin-title">Check-in / Check-out</h2>
+  <ul id="checkin-list">
+    <li id="c1">⏰ Check-in: από 15:00</li>
+    <li id="c2">⏰ Check-out: έως 11:00</li>
+  </ul>
+
+  <h2 id="beaches-title">Κοντινές Παραλίες</h2>
+  <ul>
+    <li id="b1">🏖️ Πέτρα – <a href="https://maps.google.com/?q=Πέτρα+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="b2">🏖️ Ανάξος – <a href="https://maps.google.com/?q=Ανάξος+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="b3">🏖️ Εφταλού – <a href="https://maps.google.com/?q=Εφταλού+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="b4">🏖️ Μόλυβος – <a href="https://maps.google.com/?q=Μόλυβος+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="b5">🏖️ Σκάλα Συκαμνιάς – <a href="https://maps.google.com/?q=Σκάλα+Συκαμνιάς" target="_blank">Δείτε στον χάρτη</a></li>
+  </ul>
+
+  <h2 id="poi-title">Σημεία Ενδιαφέροντος</h2>
+  <ul>
+    <li id="p1">⛪ Παναγία η Γοργόνα – 7,6 χλμ – <a href="https://maps.google.com/?q=Παναγία+η+Γοργόνα+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="p2">🏰 Κάστρο Μολύβου – <a href="https://maps.google.com/?q=Κάστρο+Μολύβου" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="p3">🛕 Μονή Αγίου Ραφαήλ – 47 χλμ – <a href="https://maps.google.com/?q=Μονή+Αγίου+Ραφαήλ+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="p4">🕍 Μονή Ταξιάρχου – 21 χλμ – <a href="https://maps.google.com/?q=Μονή+Ταξιάρχου+Μανταμάδος" target="_blank">Δείτε στον χάρτη</a></li>
+    <li id="p5">⛪ Άγιος Στέφανος – 27 χλμ – <a href="https://maps.google.com/?q=Άγιος+Στέφανος+Λέσβος" target="_blank">Δείτε στον χάρτη</a></li>
+  </ul>
+
+</div>
+
+<footer>
+  <p>&copy; 2025 Petrino View. All rights reserved.</p>
+</footer>
+
+<script>
+const translations = {
+  en: {
+    title: "Petrino View",
+    subtitle: "6 traditional apartments in Vafeios, Lesvos",
+    "about-title": "About Petrino View",
+    "about-text": "Petrino View consists of 6 independent apartments, each with a fully equipped kitchen and bathroom. The accommodation offers free WiFi, air conditioning, a garden, and a terrace. It is located in the traditional village of Vafeios, just minutes from beaches and points of interest in Northern Lesvos.",
+    "location-label": "Location:",
+    "map-link": "View on map",
+    "amenities-title": "Amenities",
+    a1: "✅ Free WiFi",
+    a2: "✅ Air conditioning",
+    a3: "✅ Garden & Terrace",
+    a4: "✅ Kitchenette",
+    a5: "✅ Private bathroom in each apartment",
+    a6: "✅ Hairdryer & bath products",
+    a7: "✅ Free bottled water in the fridge upon arrival",
+    a8: "✅ Breakfast is offered <strong>only on the first day</strong> as a welcome gesture – so you can comfortably shop for essentials.",
+    a9: "✅ Free parking space",
+    "checkin-title": "Check-in / Check-out",
+    c1: "⏰ Check-in: from 15:00",
+    c2: "⏰ Check-out: until 11:00",
+    "beaches-title": "Nearby Beaches",
+    "poi-title": "Points of Interest",
+    b1: "🏖️ Petra – View on map",
+    b2: "🏖️ Anaxos – View on map",
+    b3: "🏖️ Eftalou – View on map",
+    b4: "🏖️ Molyvos – View on map",
+    b5: "🏖️ Skala Sikamineas – View on map",
+    p1: "⛪ Panagia Gorgona – 7.6 km – View on map",
+    p2: "🏰 Molyvos Castle – View on map",
+    p3: "🛕 Monastery of Saint Raphael – 47 km – View on map",
+    p4: "🕍 Monastery of Taxiarchis – 21 km – View on map",
+    p5: "⛪ Agios Stefanos – 27 km – View on map"
+  },
+  it: {
+    title: "Petrino View",
+    subtitle: "6 appartamenti tradizionali a Vafeios, Lesbo",
+    "about-title": "Informazioni su Petrino View",
+    "about-text": "Petrino View è composto da 6 appartamenti indipendenti, ciascuno con cucina e bagno completamente attrezzati. La struttura offre WiFi gratuito, aria condizionata, giardino e terrazza. Si trova nel villaggio tradizionale di Vafeios, a pochi minuti dalle spiagge e dai punti di interesse del nord di Lesbo.",
+    "location-label": "Posizione:",
+    "map-link": "Visualizza sulla mappa",
+    "amenities-title": "Servizi",
+    a1: "✅ WiFi gratuito",
+    a2: "✅ Aria condizionata",
+    a3: "✅ Giardino e terrazza",
+    a4: "✅ Angolo cottura",
+    a5: "✅ Bagno privato in ogni appartamento",
+    a6: "✅ Asciugacapelli e prodotti da bagno",
+    a7: "✅ Acqua in bottiglia gratuita nel frigorifero all'arrivo",
+    a8: "✅ La colazione viene offerta <strong>solo il primo giorno</strong> come gesto di benvenuto – per acquistare comodamente ciò che serve.",
+    a9: "✅ Parcheggio gratuito",
+    "checkin-title": "Check-in / Check-out",
+    c1: "⏰ Check-in: dalle 15:00",
+    c2: "⏰ Check-out: entro le 11:00",
+    "beaches-title": "Spiagge vicine",
+    "poi-title": "Punti di interesse",
+    b1: "🏖️ Petra – Visualizza sulla mappa",
+    b2: "🏖️ Anaxos – Visualizza sulla mappa",
+    b3: "🏖️ Eftalou – Visualizza sulla mappa",
+    b4: "🏖️ Molyvos – Visualizza sulla mappa",
+    b5: "🏖️ Skala Sikamineas – Visualizza sulla mappa",
+    p1: "⛪ Panagia Gorgona – 7.6 km – Visualizza sulla mappa",
+    p2: "🏰 Castello di Molyvos – Visualizza sulla mappa",
+    p3: "🛕 Monastero di San Raffaele – 47 km – Visualizza sulla mappa",
+    p4: "🕍 Monastero del Taxiarchis – 21 km – Visualizza sulla mappa",
+    p5: "⛪ Agios Stefanos – 27 km – Visualizza sulla mappa"
+  },
+  tr: {
+    title: "Petrino View",
+    subtitle: "Vafeios, Midilli'de 6 geleneksel daire",
+    "about-title": "Petrino View Hakkında",
+    "about-text": "Petrino View, her biri tam donanımlı mutfak ve banyoya sahip 6 bağımsız daireden oluşur. Tesis ücretsiz WiFi, klima, bahçe ve teras sunmaktadır. Geleneksel Vafeios köyünde yer alır ve Kuzey Midilli'deki plajlara ve ilgi çekici yerlere sadece birkaç dakika uzaklıktadır.",
+    "location-label": "Konum:",
+    "map-link": "Haritada göster",
+    "amenities-title": "Olanaklar",
+    a1: "✅ Ücretsiz WiFi",
+    a2: "✅ Klima",
+    a3: "✅ Bahçe ve Teras",
+    a4: "✅ Küçük Mutfak",
+    a5: "✅ Her dairede özel banyo",
+    a6: "✅ Saç kurutma makinesi ve banyo ürünleri",
+    a7: "✅ Varışta buzdolabında ücretsiz şişe su",
+    a8: "✅ Kahvaltı sadece <strong>ilk gün</strong> sunulur – temel ihtiyaçlarınızı rahatça temin edebilmeniz için.",
+    a9: "✅ Ücretsiz otopark alanı",
+    "checkin-title": "Giriş / Çıkış",
+    c1: "⏰ Giriş: 15:00'ten itibaren",
+    c2: "⏰ Çıkış: 11:00'e kadar",
+    "beaches-title": "Yakın Plajlar",
+    "poi-title": "İlgi Çekici Yerler",
+    b1: "🏖️ Petra – Haritada göster",
+    b2: "🏖️ Anaxos – Haritada göster",
+    b3: "🏖️ Eftalou – Haritada göster",
+    b4: "🏖️ Molyvos – Haritada göster",
+    b5: "🏖️ Skala Sikamineas – Haritada göster",
+    p1: "⛪ Panagia Gorgona – 7.6 km – Haritada göster",
+    p2: "🏰 Molyvos Kalesi – Haritada göster",
+    p3: "🛕 Aziz Raphael Manastırı – 47 km – Haritada göster",
+    p4: "🕍 Taxiarchis Manastırı – 21 km – Haritada göster",
+    p5: "⛪ Agios Stefanos – 27 km – Haritada göster"
+  }
+};
+
+function changeLanguage(lang) {
+  const t = translations[lang];
+  for (const key in t) {
+    const el = document.getElementById(key);
+    if (el) el.innerHTML = t[key];
+  }
+}
+</script>
+
+</body>
+</html>
